@@ -9,3 +9,7 @@ Results from various examples taught in YouTube:
 - Unity3d Navigation And Pathfinding - How To Setup A NavMesh And A NavMesh Agent? (Scene -> NavMeshPart1.unity)
 
 <img src="https://github.com/dilmerv/UnityPathfindingEssentials/blob/master/docs/images/navmeshpart1.gif" width="300">
+
+- Unity3d Navigation And Pathfinding - How To Add A Ramp With Off-Mesh Links And Agent Options? (Scene -> NavMeshPart2.unity)
+
+<img src="https://github.com/dilmerv/UnityPathfindingEssentials/blob/master/docs/images/navmeshpart2.gif" width="300">
