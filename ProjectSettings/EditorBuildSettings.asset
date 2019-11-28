@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/NavMeshPart1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/NavMeshPart2.unity
+    guid: 1ee92167399fb410aaf50ee62770512c
+  - enabled: 1
+    path: Assets/Scenes/NavMeshPart3.unity
+    guid: e1bea3faffef54aa285e2da76ffb7bae
+  - enabled: 1
+    path: Assets/Scenes/NavMeshPart4.unity
+    guid: aab288da8735542e2ab2e7a217c9d746
   m_configObjects: {}
