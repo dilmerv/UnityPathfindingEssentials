@@ -13,3 +13,7 @@ Results from various examples taught in YouTube:
 - Unity3d Navigation And Pathfinding - How To Add A Ramp With Off-Mesh Links And Agent Options? (Scene -> NavMeshPart2.unity)
 
 <img src="https://github.com/dilmerv/UnityPathfindingEssentials/blob/master/docs/images/navmeshpart2.gif" width="300">
+
+- Unity3d Navigation And Pathfinding - How To Add An Agent Patron Between A Set Of Points? (Scene -> NavMeshPart3.unity)
+
+<img src="https://github.com/dilmerv/UnityPathfindingEssentials/blob/master/docs/images/navmeshpart3.gif" width="300">
