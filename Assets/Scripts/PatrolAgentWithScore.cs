@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolAgent : MonoBehaviour
+public class PatrolAgentWithScore : MonoBehaviour
 {
     [SerializeField]
     private Transform[] points;
@@ -45,6 +45,11 @@ public class PatrolAgent : MonoBehaviour
 
         if(!agent.pathPending && agent.remainingDistance < minRemainingDistance)
         {
+            if(agent.name.Contains("Big") && destinationPoint == 0)
+                Score.Instance.updateScore(0,1);
+            else if(agent.name.Contains("Mini") && destinationPoint == 0)
+                Score.Instance.updateScore(1,0);
+
             GoToNextPoint();
         }
     }

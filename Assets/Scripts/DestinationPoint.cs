@@ -39,7 +39,7 @@ public class DestinationPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.name == "Player")
+        if(other.gameObject.name.Contains("Player"))
         {
             originalText = overlay.text;
             overlay.text = "ACTIVATED";
@@ -56,7 +56,7 @@ public class DestinationPoint : MonoBehaviour
 
     private void OnTriggerExit(Collider other) 
     {
-        if(other.gameObject.name == "Player")
+        if(other.gameObject.name.Contains("Player"))
         {
             overlay.text = originalText;
             blockCollisionTimer = 0;

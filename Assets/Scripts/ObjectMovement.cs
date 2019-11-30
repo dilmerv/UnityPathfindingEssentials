@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformMovement : MonoBehaviour
+public class ObjectMovement : MonoBehaviour
 {
     [SerializeField]
     private float reachGoalInSeconds = 5.0f;
