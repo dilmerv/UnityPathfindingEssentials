@@ -21,3 +21,7 @@ Results from various examples taught in YouTube:
 - Unity3d Navigation And Pathfinding - Patrol Points, Destination State Changes, Jump Forces (Scene -> NavMeshPart4.unity)
 
 <img src="https://github.com/dilmerv/UnityPathfindingEssentials/blob/master/docs/images/navmeshpart4.gif" width="300">
+
+- Unity3d Navigation And Pathfinding - NavMesh Obstacles, Ramps, 60+ Agents (Scene -> NavMeshPart5.unity)
+
+<img src="https://github.com/dilmerv/UnityPathfindingEssentials/blob/master/docs/images/navmeshpart5.gif" width="300">
