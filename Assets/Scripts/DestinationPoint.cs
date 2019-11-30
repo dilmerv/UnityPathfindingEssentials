@@ -1,5 +1,7 @@
-﻿using TMPro;
+﻿using System.Data.Common;
+using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DestinationPoint : MonoBehaviour
 {
@@ -11,21 +13,53 @@ public class DestinationPoint : MonoBehaviour
 
     private string originalText;
 
-    private void OnCollisionEnter(Collision other) 
+    [SerializeField]
+    private float blockCollisionForSeconds = 1.5f;
+
+    private float blockCollisionTimer = 1.5f;
+
+    private NavMeshAgent agent;
+
+    private void Update() 
+    {
+        if(blockCollisionTimer >= blockCollisionForSeconds)
+        {
+            if(agent != null)
+            {
+                agent.enabled = true;
+                blockCollisionTimer = 0;
+                agent = null;
+            }
+        }
+        else if(agent != null)
+        {
+            blockCollisionTimer += 1.0f * Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) 
     {
         if(other.gameObject.name == "Player")
         {
             originalText = overlay.text;
             overlay.text = "ACTIVATED";
-            other.gameObject.GetComponent<Rigidbody>().AddForce(force * Vector3.up, ForceMode.Force);
+
+            agent = other.gameObject.GetComponent<NavMeshAgent>();
+            agent.enabled = false;
+
+            other.gameObject.GetComponent<Rigidbody>()
+                .AddForce(Vector3.up * force, ForceMode.Force);
+            other.gameObject.GetComponent<Rigidbody>()
+                .AddForce(other.gameObject.transform.forward * force, ForceMode.Force);
         }
     }
 
-    private void OnCollisionExit(Collision other) 
+    private void OnTriggerExit(Collider other) 
     {
         if(other.gameObject.name == "Player")
         {
             overlay.text = originalText;
+            blockCollisionTimer = 0;
         }
     }
 }

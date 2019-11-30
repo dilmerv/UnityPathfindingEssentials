@@ -38,6 +38,11 @@ public class PatrolAgent : MonoBehaviour
 
     private void Update() 
     {
+        if(!agent.enabled)
+        {
+            return;
+        }
+        
         if(!agent.pathPending && agent.remainingDistance < minRemainingDistance)
         {
             Debug.Log(destinationPoint);
