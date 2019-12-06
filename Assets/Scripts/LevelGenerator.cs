@@ -1,4 +1,11 @@
-﻿using System.Collections.Generic;
+﻿/* NavMeshPart7.unity 
+ * LevelGenerator.cs
+ * LevelBaker.cs
+ * PatrolAgentProcedural.cs
+ */
+
+
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -19,11 +26,14 @@ public class LevelGenerator : MonoBehaviour
     private int goalTracker = 0;
 
     [SerializeField]
+    [Range(2, 200)]
     private int howManyFloors = 10;
 
     private int floorTracker = 0;
     
-    private float buildEvery = 2;
+    [SerializeField]
+    [Range(0, 5.0f)]
+    private float buildFloorInSeconds = 2;
 
     private float buildTimer = 0;
 
@@ -34,7 +44,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Awake()
     {
-        buildTimer = buildEvery;
+        buildTimer = buildFloorInSeconds;
     }
 
     void Update()
@@ -53,7 +63,7 @@ public class LevelGenerator : MonoBehaviour
             return;
         }
 
-        if(buildTimer >= buildEvery)
+        if(buildTimer >= buildFloorInSeconds)
         {
             GameObject newFloor = Instantiate(floorPrefab, trackedPosition, Quaternion.identity);
             newFloor.transform.parent = transform;
@@ -84,8 +94,7 @@ public class LevelGenerator : MonoBehaviour
                 trackedPosition.z - newFloor.transform.localScale.z);
 
             floorTracker++;
-            buildEvery = 0;
-
+            buildTimer = 0;
         }
         else
         {

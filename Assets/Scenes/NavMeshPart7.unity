@@ -456,7 +456,8 @@ MonoBehaviour:
   goalPrefab: {fileID: 174582409046020277, guid: 3f3803455ba2841db8d1f1abc1bd4d8d,
     type: 3}
   goals: []
-  howManyFloors: 30
+  howManyFloors: 20
+  buildFloorInSeconds: 0.1
 --- !u!114 &1155531477
 MonoBehaviour:
   m_ObjectHideFlags: 0
