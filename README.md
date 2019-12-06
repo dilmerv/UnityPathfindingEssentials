@@ -29,3 +29,7 @@ Results from various examples taught in YouTube:
 - Unity3d Navigation And Pathfinding - NavMesh Obstacles and Score Board Between Agents (Scene -> NavMeshPart6.unity)
 
 <img src="https://github.com/dilmerv/UnityPathfindingEssentials/blob/master/docs/images/navmeshpart6.gif" width="300">
+
+- Unity3d Navigation And Pathfinding - NavMesh Generation At RunTime With A Basic Level Generator (Scene -> NavMeshPart7.unity)
+
+<img src="https://github.com/dilmerv/UnityPathfindingEssentials/blob/master/docs/images/navmeshpart7.gif" width="300">
